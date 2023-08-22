@@ -1,0 +1,68 @@
+.calendar {
+    // layout
+    display: flex;
+
+    .calendar__container {
+        // layout
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: rem-calc(25);
+    }
+
+    .calendar__top {
+        // layout
+        width: 100%;
+        display: flex;
+    }
+
+    .calendar__title {
+        // layout
+        width: 100%;
+        margin: rem-calc(0 0 16);
+
+        // typo
+        text-align: center;
+    }
+
+    .calendar__day,
+    .calendar__day-name {
+        // layout
+        width: calc(100% / 7);
+    }
+
+    .calendar__day-name {
+        // layout
+        margin-bottom: rem-calc(20);
+    }
+
+    .calendar__day {
+        // layout
+        min-height: rem-calc(50);
+    }
+
+    .calendar__day-number,
+    .calendar__day-event {
+        // layout
+        width: 100%;
+        display: block;
+    }
+
+    .calendar__prev,
+    .calendar__next {
+        // event 
+        cursor: pointer;
+    }
+
+    .calendar__selected-day {
+        // layout
+        width: 50%;
+        padding: rem-calc(30);
+
+        // typo
+        color: $color-primary-white;
+
+        // design
+        background-color: $color-primary;
+    }
+}

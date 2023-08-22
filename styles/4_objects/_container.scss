@@ -1,0 +1,11 @@
+.container {
+    // layout
+    margin: 0 auto;
+    padding: rem-calc(0 32);
+    max-width: rem-calc(1440);
+}
+
+.container__fullwidth {
+    // layout
+    width: 100vw;
+}

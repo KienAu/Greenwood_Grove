@@ -1,0 +1,29 @@
+.call-to-action__inner{
+    // layout
+   height: rem-calc(350);
+   overflow: hidden;
+   position: relative;
+}
+
+.call-to-action__video {
+    // layout
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    position: absolute;
+
+    // animation
+    transform: translate(-50%, -50%);
+}
+
+.call-to-action__text {
+    // layout
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    z-index: 1;
+    
+
+    // animation
+    transform: translate(-50%, -50%);
+}

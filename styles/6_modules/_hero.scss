@@ -1,0 +1,17 @@
+.hero {
+    // layout
+    height: calc(100vh - rem-calc(80));
+    position: relative;
+    overflow: hidden;
+    max-height: rem-calc(1024);
+
+    img {
+        // layout
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+    }
+}

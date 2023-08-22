@@ -1,0 +1,16 @@
+// Breakpoint
+$breakpoints:  (
+  "smallMobile": 576px,
+  "bigMobile": 768px,
+  "tablet": 1024px,
+  "laptop": 1440px,
+  "desktop": 1920px,
+  "2k": 2560px,
+);
+
+// Fonts
+$font-primary: 'Roboto';
+
+// Colors
+$color-primary: #333;
+$color-primary-white: #fff;

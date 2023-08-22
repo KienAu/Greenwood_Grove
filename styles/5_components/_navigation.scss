@@ -1,0 +1,27 @@
+.navigation {
+    // layout
+    padding: rem-calc(15 0);
+}
+
+.navigation__inner {
+    // layout
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation__logo {
+    // layout
+    width: rem-calc(30);
+}
+
+.navigation__list {
+    // layout
+    display: flex;
+    column-gap: 20px;
+
+    .navigation__lang {
+        // typo
+        text-transform: uppercase;
+    }
+}
