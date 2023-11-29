@@ -1,0 +1,46 @@
+h1,h2,h3,h4,h5,h6 {
+    // layout
+    margin: 0;
+}
+
+h1 {
+    // typo
+    @include breakpoint-style('font-size', $font-size-h1);
+    font-weight: normal;
+    font-family: $font-display;
+}
+
+h2 {
+    // typo
+    @include breakpoint-style('font-size', $font-size-h2);
+}
+
+h3 {
+    // typo
+    @include breakpoint-style('font-size', $font-size-h3);
+}
+
+h4 {
+    // typo
+    @include breakpoint-style('font-size', $font-size-h4);
+}
+
+h5 {
+    // typo
+    @include breakpoint-style('font-size', $font-size-h5);
+}
+
+h6 {
+    // typo
+    @include breakpoint-style('font-size', $font-size-h6);
+}
+
+.button {
+    // typo
+    @include breakpoint-style('font-size', $font-size-button);
+}
+
+p {
+    // typo
+    @include breakpoint-style('font-size', $font-size-text);
+}

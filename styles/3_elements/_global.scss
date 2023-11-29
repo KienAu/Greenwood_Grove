@@ -1,12 +1,12 @@
 body {
     // typo
-    color: $color-primary;
-    font-family: $font-primary;
+    color: $color-dark;
+    font-family: $font-body;
 }
 
 a {
     // typo
-    color: $color-primary;
+    color: $color-dark;
     text-decoration: none;
 }
 
@@ -28,4 +28,36 @@ img {
 section {
     // layout
     padding: rem-calc(32 0);
+}
+
+textarea {
+    // layout
+    width: 100%;
+    padding: rem-calc(10);
+
+    // typo
+    color: $color-light;
+
+    // design
+    border: rem-calc(1) solid $color-light;
+    outline: none;
+    border-radius: rem-calc(20);
+    background-color: transparent;
+
+    // event
+    resize: none;
+}
+
+input {
+    // layout
+    padding: rem-calc(10);
+
+    // typo
+    color: $color-light;
+
+    // design
+    border: rem-calc(1) solid $color-light;
+    outline: none;
+    border-radius: rem-calc(20);
+    background-color: transparent;
 }

@@ -17,7 +17,6 @@
     "nuxt": "^3.4.3"
   },
   "dependencies": {
-    "@nuxtjs/supabase": "^1.0.2",
     "@storyblok/nuxt": "^5.4.4",
     "axios": "^1.4.0",
     "gsap": "^3.11.5",

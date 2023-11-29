@@ -6,22 +6,125 @@
 .navigation__inner {
     // layout
     display: flex;
+    column-gap: rem-calc(32);
     align-items: center;
     justify-content: space-between;
 }
 
+.navigation__left-side,
+.navigation__right-side {
+    // layout
+    display: flex;
+}
+
 .navigation__logo {
     // layout
-    width: rem-calc(30);
+    width: 100%;
+    height: 100%;
+    max-width: rem-calc(275);
+}
+
+.navigation__line {
+    // layout 
+    width: rem-calc(1);
+    height: 100%;
+    display: block;
+
+    // design
+    background-color: $color-grey;
 }
 
 .navigation__list {
     // layout
     display: flex;
-    column-gap: 20px;
+    column-gap: rem-calc(16);
+    align-items: center;
 
-    .navigation__lang {
+    &::before {
+        // layout 
+        width: rem-calc(1);
+        height: 100%;
+        margin: rem-calc(0 16);
+        content: '';
+
+        // design
+        background-color: $color-grey;
+    }
+    
+    .navigation__item {
+        .navigation__link {
+            // layout 
+            padding: rem-calc(5 16);
+
+            // typo
+            @include breakpoint-style('font-size', $font-size-text);
+            color: $color-tertiary;
+
+            // design
+            border-radius: rem-calc(20);
+        }
+
+        .router-link-active {
+            // typo
+            color: $color-light;
+
+            // design
+            background-color: $color-tertiary;
+        }
+    }
+}
+
+.navigation__lang {
+    // layout 
+    height: rem-calc(67);
+    display: flex;
+    align-items: center;
+
+    &::after {
+        // layout 
+        height: 100%;
+        content: '';
+        display: inline-block;
+    }
+
+    &:first-of-type {
+        &::after {
+            // layout 
+            width: rem-calc(1);
+            margin: rem-calc(0 16W);
+
+            // design
+            background-color: $color-grey;
+        }
+    }
+
+    .navigation__link {
+        // layout 
+        width: rem-calc(35);
+        height: rem-calc(35);
+        display: inline-block;
+        position: relative;
+        
         // typo
-        text-transform: uppercase;
+        color: $color-light;
+
+        // design
+        border-radius: rem-calc(30);
+        background-color: $color-grey;
+
+        &.router-link-exact-active {
+            // design
+            background-color: $color-tertiary;
+        }
+
+        .navigation__link-text {
+            // layout 
+            top: 50%;
+            left: 50%;
+            position: absolute;
+
+            // animation 
+            transform: translate(-50%, -50%);
+        }
     }
 }

@@ -1,16 +1,48 @@
 // Breakpoint
-$breakpoints:  (
-  "smallMobile": 576px,
-  "bigMobile": 768px,
-  "tablet": 1024px,
-  "laptop": 1440px,
-  "desktop": 1920px,
-  "2k": 2560px,
-);
+$mobile: rem-calc(425);
+$tablet: rem-calc(768);
+$laptop: rem-calc(1024);
+$desktop: rem-calc(1440);
+$hd: rem-calc(1920);
+$two-k: rem-calc(2560);
 
-// Fonts
-$font-primary: 'Roboto';
+// Fonts Family
+$font-display: 'Dubbo', serif;
+$font-body: 'Mukta', sans-serif;
 
 // Colors
-$color-primary: #333;
-$color-primary-white: #fff;
+$color-dark: #000000;
+$color-light: #ffffff;
+$color-grey: #cccccc;
+$color-primary: #71cc49;
+$color-secondary: #207b25;
+$color-tertiary: #043b05;
+
+// Fonts size
+$font-size-h1: (
+    null: rem-calc(130),
+);
+$font-size-h2: (
+    null: rem-calc(98),
+);
+$font-size-h3: (
+    null: rem-calc(72),
+);
+$font-size-h4: (
+    null: rem-calc(48),
+);
+$font-size-h5: (
+    null: rem-calc(32),
+);
+$font-size-h6: (
+    null: rem-calc(24),
+);
+$font-size-button: (
+    null: rem-calc(20),
+);
+$font-size-text: (
+    null: rem-calc(16),
+);
+$font-size-footer-title: (
+    null: rem-calc(18),
+);

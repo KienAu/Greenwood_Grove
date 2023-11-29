@@ -1,0 +1,12 @@
+.button {
+    // layout
+    padding: rem-calc(16 32);
+
+    // design
+    border: none;
+    border-radius: rem-calc(20);
+    background-color: $color-primary;
+
+    // event
+    cursor: pointer;
+}

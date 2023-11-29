@@ -1,0 +1,102 @@
+.footer {
+    .footer__inner {
+        // layout 
+        padding-top: rem-calc(46);
+        // typo
+        color: $color-light;
+
+        // design
+        background-color: $color-dark;
+
+        .container {
+            // layout 
+            display: flex;
+            padding-top: rem-calc(46);
+        }
+    }
+    
+    .footer-col {
+        // layout 
+        display: flex;
+        column-gap: rem-calc(32);
+        padding-inline: rem-calc(16);
+        padding-bottom: rem-calc(32);
+
+        &:first-of-type {
+            // layout
+            padding-left: 0;
+            min-width: rem-calc(275);
+
+            // design
+            border-right: rem-calc(1) solid $color-grey;
+        }
+
+        &:last-child {
+            // layout
+            padding-right: 0;
+            // design
+            border-left: rem-calc(1) solid $color-grey
+        }
+    }
+
+    .footer__logo {
+        // layout 
+        width: rem-calc(275);
+    }
+
+    .footer-title {
+        // typo
+        @include breakpoint-style('font-size', $font-size-footer-title);
+    }
+
+    .footer-newsletter__text {
+        // layout
+        max-width: rem-calc(150);
+    }
+
+    .footer-newsletter__form {
+        // layout
+        display: flex;
+        row-gap: rem-calc(16);
+        flex-flow: row wrap;
+        max-width: rem-calc(400);
+        justify-content: space-between;
+
+        .footer-newsletter__input-wrapper {
+            display: flex;
+            column-gap: rem-calc(16);
+            justify-content: space-between;
+        }
+
+        .input {
+            // layout
+            width: 50%;
+        }
+
+        .button {
+            // layout
+            padding: rem-calc(10 16);
+
+            // typo
+            @include breakpoint-style('font-size', $font-size-text);
+        }
+    }
+
+    .footer-copyright__inner {
+        // layout
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .footer-google-map {
+        // layout
+        overflow: hidden;
+
+        iframe {
+            // layout
+            width: 100%;
+            height: rem-calc(400);
+        }
+    }
+}
