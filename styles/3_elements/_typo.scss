@@ -6,6 +6,7 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
     // typo
     @include breakpoint-style('font-size', $font-size-h1);
+    line-height: .8;
     font-weight: normal;
     font-family: $font-display;
 }
@@ -13,11 +14,17 @@ h1 {
 h2 {
     // typo
     @include breakpoint-style('font-size', $font-size-h2);
+    line-height: 1;
+    font-weight: normal;
+    font-family: $font-display;
 }
 
 h3 {
     // typo
     @include breakpoint-style('font-size', $font-size-h3);
+    line-height: 1;
+    font-weight: 600;
+    font-family: $font-body;
 }
 
 h4 {
@@ -43,4 +50,5 @@ h6 {
 p {
     // typo
     @include breakpoint-style('font-size', $font-size-text);
+    line-height: 1.2;
 }

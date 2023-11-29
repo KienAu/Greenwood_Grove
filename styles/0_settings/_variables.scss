@@ -17,16 +17,20 @@ $color-grey: #cccccc;
 $color-primary: #71cc49;
 $color-secondary: #207b25;
 $color-tertiary: #043b05;
+$color-violet: #AB4A9C;
+$color-yellow: #FFC60B;
+$color-pink: #ED1164;
+$color-blue: #00AEEF;
 
 // Fonts size
 $font-size-h1: (
     null: rem-calc(130),
 );
 $font-size-h2: (
-    null: rem-calc(98),
+    null: rem-calc(60),
 );
 $font-size-h3: (
-    null: rem-calc(72),
+    null: rem-calc(60),
 );
 $font-size-h4: (
     null: rem-calc(48),
@@ -38,11 +42,11 @@ $font-size-h6: (
     null: rem-calc(24),
 );
 $font-size-button: (
-    null: rem-calc(20),
+    null: rem-calc(22),
 );
 $font-size-text: (
-    null: rem-calc(16),
+    null: rem-calc(20),
 );
 $font-size-footer-title: (
-    null: rem-calc(18),
+    null: rem-calc(20),
 );

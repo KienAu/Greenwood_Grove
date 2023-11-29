@@ -1,5 +1,5 @@
 <template>
-    <div v-editable="blok" class="hero">
+    <section v-editable="blok" class="hero">
       <div class="container hero-content">
         <h1 class="hero-title">{{ blok.title }}</h1>
         <div class="hero-separator">
@@ -19,12 +19,16 @@
             <img class="hero-carousel__image" :src="item.image.filename" :alt="item.image.alt" :class="{'is-active': index === currentActiveSlide}" />
           </div>
           <div class="hero-carousel__controls">
-            <button class="hero-carousel__control is-next" @click="handleSlideChange(1)">next</button>
-            <button class="hero-carousel__control is-prev" @click="handleSlideChange(-1)">prev</button>
+            <button class="hero-carousel__control is-next" @click="handleSlideChange(1)">
+              <MacroArrowLeft />
+            </button>
+            <button class="hero-carousel__control is-prev" @click="handleSlideChange(-1)">
+              <MacroArrowRight />
+            </button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </template>
    
   <script setup>
