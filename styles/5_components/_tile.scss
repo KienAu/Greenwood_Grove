@@ -1,0 +1,80 @@
+.tile {
+    // layout 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    // typo
+    color: $color-light;
+
+    .tile__icon-wrapper {
+        // layout 
+        width: rem-calc(130);
+        height: rem-calc(130);
+        display: flex;
+        position: relative;
+        margin-top: rem-calc(-55);
+        justify-content: center;
+        
+        // design
+        box-shadow: 1px -19px 37px -6px rgba(0,0,0,0.3);
+        background-color: $color-secondary;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+
+        img {
+            // layout 
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            max-width: rem-calc(35);
+        }
+    }   
+
+    .tile__hidden-bg {
+        // layout
+        left: 50%; 
+        width: rem-calc(200);
+        height: rem-calc(60);
+        bottom: 0;
+        position: absolute;
+
+        // animation 
+        transform: translateX(-50%);
+
+        // design
+        background-color: $color-secondary;
+    }
+
+    .tile__seperator {
+        // layout 
+        width: rem-calc(150);
+        height:rem-calc(2);
+        display: flex;
+        margin: rem-calc(0 0 32);
+        align-items: center;
+        justify-content: space-evenly;
+
+        // design
+        background-color: $color-tertiary;
+
+        span {
+            // layout 
+            width: rem-calc(10);
+            height: rem-calc(10);
+            display: block;
+
+            // design
+            background-color: $color-tertiary;
+
+            // animation 
+            transform: rotate(-45deg)
+        }
+    }
+
+    .tile__description {
+        // typo
+        text-align: center;
+    }
+}

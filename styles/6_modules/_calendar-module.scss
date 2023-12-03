@@ -1,0 +1,42 @@
+.calendar-module {
+    // layout 
+    padding: rem-calc(48 0);
+
+    .calendar-module__top {
+        // layout 
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .calendar-module__title {
+        // typo
+        text-align: center;
+    }
+
+    .calendar-module__seperator {
+        // layout 
+        width: rem-calc(150);
+        height:rem-calc(2);
+        display: flex;
+        margin: rem-calc(32 0);
+        align-items: center;
+        justify-content: space-evenly;
+
+        // design
+        background-color: $color-secondary;
+
+        span {
+            // layout 
+            width: rem-calc(10);
+            height: rem-calc(10);
+            display: block;
+
+            // design
+            background-color: $color-secondary;
+
+            // animation 
+            transform: rotate(-45deg)
+        }
+    }
+}

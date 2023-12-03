@@ -47,7 +47,7 @@ h6 {
     @include breakpoint-style('font-size', $font-size-button);
 }
 
-p {
+p, a {
     // typo
     @include breakpoint-style('font-size', $font-size-text);
     line-height: 1.2;

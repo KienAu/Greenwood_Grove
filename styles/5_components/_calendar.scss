@@ -1,6 +1,8 @@
 .calendar {
     // layout
     display: flex;
+    flex-wrap: wrap;
+    column-gap: calc(10% - rem-calc(60));
 
     .calendar__container {
         // layout
@@ -29,6 +31,13 @@
     .calendar__day-name {
         // layout
         width: calc(100% / 7);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        // event 
+        cursor: pointer;
     }
 
     .calendar__day-name {
@@ -41,23 +50,23 @@
         min-height: rem-calc(50);
     }
 
-    .calendar__day-number,
-    .calendar__day-event {
-        // layout
-        width: 100%;
-        display: block;
-    }
-
     .calendar__prev,
     .calendar__next {
         // event 
         cursor: pointer;
     }
 
+    .calendar__legend {
+        // layout 
+        width: 40%;
+        margin-top: rem-calc(32);
+    }
+
     .calendar__selected-day {
         // layout
         width: 50%;
-        padding: rem-calc(30);
+        padding: rem-calc(16);
+        margin-top: rem-calc(32);
 
         // typo
         color: $color-light;

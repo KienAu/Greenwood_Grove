@@ -6,4 +6,11 @@
         // layout
         height: rem-calc(100);
     }
+
+    .three-tiles__inner {
+        // layout 
+        display: flex;
+        column-gap: rem-calc(100);
+        padding-bottom: rem-calc(44);
+    }
 }

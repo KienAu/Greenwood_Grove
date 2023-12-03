@@ -3,7 +3,7 @@
     height: calc(100vh - rem-calc(135));
     position: relative;
     overflow: hidden;
-    max-height: rem-calc(1024);
+    min-height: rem-calc(1024);
 
     // design
     background-color: $color-tertiary;

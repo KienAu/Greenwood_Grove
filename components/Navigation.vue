@@ -1,5 +1,5 @@
 <template>
-  <header class="navigation" v-editable="blok">
+  <header class="navigation">
     <div class="container navigation__inner">
       <div class="navigation__left-side">
         <Nuxt-link class="navigation__link" :to="localePath('/')">
@@ -49,7 +49,7 @@
 
         // Do something with the fetched data
         logo.value = data.story.content.logo
-        navigationLinks.value = data.story.content.navigation
+        navigationLinks.value = data.story.content.Navigations
       } catch (error) {
         console.error('Error fetching data:', error);
       }

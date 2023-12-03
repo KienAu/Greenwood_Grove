@@ -14,6 +14,12 @@
                 <span class="calendar__day-event"></span>
             </div>
         </div>
+        <div class="calendar__legend">
+            <h6> {{ $t('Legend') }} </h6>
+            <div class="calendar__legend--container">
+                <div></div>
+            </div>
+        </div>
         <div class="calendar__selected-day">
             <div class="calendar__selected-day-number"></div>
             <div class="calendar__selected-day-name"></div>
