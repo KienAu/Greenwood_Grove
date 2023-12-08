@@ -26,8 +26,12 @@
                     <h6 class="footer-title">
                         {{ $t('Follow the Grove on Social Media') }}
                     </h6>
-                    <ul>
-                        <li></li>
+                    <ul class="footer-social-media__list">
+                        <li v-for="social in footer.socialMediaList">
+                            <a :href="social.link.url" target="_self">
+                                <img class="footer-social-media__icon" :src="social.icon.filename" :alt="social.icon.alt" />
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

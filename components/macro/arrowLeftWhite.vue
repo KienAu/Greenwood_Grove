@@ -3,7 +3,7 @@
 </template>
 
 <style>
-    .cls-1{fill:url(#linear-gradient);}
+    .cls-1{fill:#ffffff;}
     .cls-1,.cls-2{stroke-width:0px;}
-    .cls-2{fill:url(#linear-gradient-2);}
+    .cls-2{fill:#ffffff;}
 </style>

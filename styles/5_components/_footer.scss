@@ -34,6 +34,8 @@
         &:last-child {
             // layout
             padding-right: 0;
+            flex-direction: column;
+            
             // design
             border-left: rem-calc(1) solid $color-grey
         }
@@ -79,6 +81,18 @@
 
             // typo
             @include breakpoint-style('font-size', $font-size-text);
+        }
+    }
+
+    .footer-social-media__list {
+        // layout
+        display: flex;
+        column-gap: rem-calc(16);
+
+        .footer-social-media__icon {
+            // layout
+            width: rem-calc(30);
+            height: rem-calc(30);
         }
     }
 
