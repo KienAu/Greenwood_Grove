@@ -28,10 +28,32 @@
 
     .calendar__title {
         // layout
-        padding: rem-calc(16 0);
+        display: flex;
+        height: 100%;
 
         // typo
+        color: $color-tertiary;
         text-align: center;
+
+        // design
+        background-color: $color-light;
+
+        span {
+            // layout 
+            width: rem-calc(1);
+            height: calc(100% - rem-calc(20));
+            display: block;
+            margin: rem-calc(10 0);
+
+            // design 
+            background-color: $color-grey;
+        }
+
+        .calendar__title--month,
+        .calendar__title--year {
+            // layout 
+            padding: rem-calc(16 80);
+        }
     }
 
     .calendar__day-name--container {
@@ -83,7 +105,7 @@
         width: calc((100% - rem-calc(8)) / 7);
         height: rem-calc(80);
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
 
         // design
@@ -112,6 +134,45 @@
             &.is-empty {
                 // design
                 background-color: transparent;
+            }
+        }
+
+        .calendar__day-event--list {
+            // layout 
+            height: rem-calc(34);
+            display: flex;
+            column-gap: rem-calc(5);
+            margin: 0;
+            align-items: center;
+
+            .calendar__dot {
+                // layout 
+                width: rem-calc(10);
+                height: rem-calc(10);
+                
+                // design
+                border-radius: 50%;
+                background-color: $color-light;
+
+                &.calendar__dot--events {
+                    // design
+                    background-color: $color-yellow;
+                }
+
+                &.calendar__dot--courses {
+                    // design
+                    background-color: $color-violet;
+                }
+
+                &.calendar__dot--workshops {
+                    // design
+                    background-color: $color-pink;
+                }
+
+                &.calendar__dot--celebrations {
+                    // design
+                    background-color: $color-blue;
+                }
             }
         }
 
@@ -155,6 +216,51 @@
             display: flex;
             column-gap: rem-calc(16);
         }
+
+        .calendar__legend--type-list {
+            // layout
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: rem-calc(16);
+        }
+
+        .calendar__legend--type-item {
+            // layout
+            width: 50%;
+            display: flex;
+            align-items: center;
+            column-gap: rem-calc(8);
+
+            .calendar__legend--color {
+                // layout
+                display: block;
+                width: rem-calc(10);
+                height: rem-calc(10);
+
+                // design
+                border-radius: 50%;
+
+                &.calendar__legend--color--courses {
+                    // design
+                    background-color: $color-violet;
+                }
+
+                &.calendar__legend--color--events {
+                    // design
+                    background-color: $color-yellow;
+                }
+
+                &.calendar__legend--color--workshops {
+                    // design
+                    background-color: $color-pink;
+                }
+
+                &.calendar__legend--color--celebrations {
+                    // design
+                    background-color: $color-blue;
+                }
+            }
+        }
     }
 
     .calendar__highlight {
@@ -177,6 +283,58 @@
             // design
             border-bottom-right-radius: rem-calc(20);
             background-color: $color-secondary;
+        }
+
+        .calendar__highlight--event-list {
+            // layout
+            padding-inline: rem-calc(16);
+
+            .calendar__highlight--event-item {
+                // layout
+                display: flex;
+                column-gap: rem-calc(8);
+                align-items: center;
+                margin-bottom: rem-calc(16);
+
+                &::before {
+                    // layout 
+                    display: block;
+                    content: '';
+                    width: rem-calc(10);
+                    height: rem-calc(10);
+
+                    // design
+                    border-radius: 50%;
+                }
+
+                &.calendar__highlight--type-events {
+                    &::before {
+                        // design
+                        background-color: $color-yellow;
+                    }
+                }
+
+                &.calendar__highlight--type-courses {
+                    &::before {
+                        // design
+                        background-color: $color-violet;
+                    }
+                }
+
+                &.calendar__highlight--type-workshops {
+                    &::before {
+                        // design
+                        background-color: $color-pink;
+                    }
+                }
+
+                &.calendar__highlight--type-celebrations {
+                    &::before {
+                        // design
+                        background-color: $color-blue;
+                    }
+                }
+            }
         }
     }
 }
