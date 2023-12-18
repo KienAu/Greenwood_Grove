@@ -7,7 +7,7 @@
         </Nuxt-link>
         <nav class="navigation__list">
           <div class="navigation__item" v-for="nav in navigationLinks" :key="nav._uid">
-            <Nuxt-link class="navigation__link" :to="localePath(nav.link.story.url)">
+            <Nuxt-link class="navigation__link" :to="localePath(nav.link.story.url == '/' ? '/' : '/' + nav.link.story.url)">
               {{ nav.text }}
             </Nuxt-link>
           </div>
@@ -50,10 +50,12 @@
         // Do something with the fetched data
         logo.value = data.story.content.logo
         navigationLinks.value = data.story.content.Navigations
+
       } catch (error) {
         console.error('Error fetching data:', error);
       }
   }
+
 
 
   onBeforeMount(() => {
