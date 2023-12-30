@@ -5,7 +5,7 @@ export default defineNuxtConfig({
         apiOptions: { "region": "us" },
     }], 
     '@nuxtjs/i18n',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
     ],
     app: {
         head: {

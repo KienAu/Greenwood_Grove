@@ -1,0 +1,69 @@
+.ressource {
+    // layout 
+    width: calc(50% - rem-calc(32));
+
+    .ressource__inner {
+        // layout 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: rem-calc(100 32 40);
+        margin-top: rem-calc(100);
+
+        // design
+        border-radius: rem-calc(20);
+        background-color: $color-secondary;
+    }
+
+    .ressource__thumbnail-wrapper {
+        // layout 
+        top: rem-calc(-75);
+        width: rem-calc(150);
+        height: rem-calc(150);
+        overflow: hidden;
+        position: absolute;
+
+        // design
+        border: rem-calc(10) solid $color-secondary;
+        border-radius: 50%;
+
+        .ressource__thumbnail {
+            // layout
+            width: rem-calc(130);
+            height: rem-calc(130);
+            object-fit: cover;
+            object-position: center;
+
+            // design
+            border: rem-calc(10) solid $color-primary;
+            border-radius: 50%;
+        }
+    }
+
+    .ressource__title {
+        // typo
+        text-align: center;
+        font-family: $font-display;
+        font-weight: 400;
+    }
+
+    .ressource__button {
+        // layout 
+        bottom: rem-calc(-20);
+        padding: rem-calc(8 32);
+        position: absolute;
+
+        // typo 
+        @include breakpoint-style('font-size', $font-size-button);
+        color: $color-tertiary;
+
+        // design
+        border: 0;
+        border-radius: rem-calc(20);
+        background-color: $color-primary;
+
+        // evemt 
+        cursor: pointer;
+    }
+}

@@ -9,8 +9,6 @@
     
     const url = slug && slug.length > 0 ? slug.join('/') : 'home'
 
-    console.log(url)
-
     const story = await useAsyncStoryblok(url.replace(/\/$/, ''),
       {
         version: 'draft',

@@ -1,0 +1,83 @@
+.ressources-module {
+    // layout 
+    padding: rem-calc(48 0);
+
+    // typo
+    color: $color-light;
+
+    // design
+    background-color: $color-tertiary;
+
+    .ressources-module__top {
+        // layout 
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .ressources-module__title {
+        // typo
+        text-align: center;
+    }
+
+    .ressources-module__seperator {
+        // layout 
+        width: rem-calc(150);
+        height:rem-calc(2);
+        display: flex;
+        margin: rem-calc(32 0);
+        align-items: center;
+        justify-content: space-evenly;
+
+        // design
+        background-color: $color-secondary;
+
+        span {
+            // layout 
+            width: rem-calc(10);
+            height: rem-calc(10);
+            display: block;
+
+            // design
+            background-color: $color-secondary;
+
+            // animation 
+            transform: rotate(-45deg)
+        }
+    }
+
+    .ressources-module__list {
+        // layout 
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: rem-calc(32);
+        justify-content: space-between;
+        align-items: center;
+        row-gap: rem-calc(48);
+    }
+
+    .ressource__btn-load-more--container {
+        // layout 
+        width: 100%;
+        display: flex;
+        margin-top: rem-calc(48);
+        justify-content: center;
+        align-items: center;
+
+        .ressource__btn-load-more {
+            // layout 
+            padding: rem-calc(16 32);
+
+            // typo
+            color: $color-light;
+
+            // design
+            border: rem-calc(1) solid $color-secondary;
+            background-color: transparent;
+            border-radius: rem-calc(25);
+
+            // event 
+            cursor: pointer;
+        }
+    }
+}
