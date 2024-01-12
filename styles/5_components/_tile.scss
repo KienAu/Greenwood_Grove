@@ -1,6 +1,5 @@
 .tile {
     // layout 
-    width:100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -8,16 +7,6 @@
 
     // typo
     color: $color-light;
-
-    @include tablet {
-        // layout 
-        width: calc((100% / 2) - rem-calc(32));
-    }
-
-    @include laptop {
-        // layout 
-        width: calc((100% / 3) - rem-calc(100));
-    }
 
     .tile__icon-wrapper {
         // layout 

@@ -2,7 +2,6 @@
     .footer__inner {
         // layout 
         padding-top: rem-calc(46);
-
         // typo
         color: $color-light;
 
@@ -25,19 +24,11 @@
 
         &:first-of-type {
             // layout
-            width: rem-calc(150);
             padding-left: 0;
             min-width: rem-calc(275);
-            align-items: center;
-            justify-content: center;
 
             // design
             border-right: rem-calc(1) solid $color-grey;
-
-            @include laptop {
-                // layout
-                width: auto;
-            }
         }
 
         &:last-child {
@@ -48,41 +39,11 @@
             // design
             border-left: rem-calc(1) solid $color-grey
         }
-
-        &.is-desktop {
-            // layout
-            display: none;
-
-            @include laptop {
-                // layout
-                display: flex;
-            }
-        }
     }
 
     .footer__logo {
         // layout 
         width: rem-calc(275);
-
-        &.is-desktop {
-            // layout
-            display: none;
-
-            @include laptop {
-                // layout
-                display: block;
-            }
-        }
-
-        &.is-mobile {
-            // layout
-            display: block;
-
-            @include laptop {
-                // layout
-                display: none;
-            }
-        }
     }
 
     .footer-title {
@@ -92,7 +53,7 @@
 
     .footer-newsletter__text {
         // layout
-        max-width: rem-calc(300);
+        max-width: rem-calc(150);
     }
 
     .footer-newsletter__form {
@@ -123,8 +84,7 @@
         }
     }
 
-    .footer-social-media__list,
-    .footer-copyright__list {
+    .footer-social-media__list {
         // layout
         display: flex;
         column-gap: rem-calc(16);
@@ -141,16 +101,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
-
-    .footer-copyright__list {
-        // layout
-        display: flex;
-
-        @include laptop {
-            // layout
-            display: none;
-        }
     }
     
     .footer-google-map {

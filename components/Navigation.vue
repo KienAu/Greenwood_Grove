@@ -5,7 +5,7 @@
         <Nuxt-link class="navigation__link" :to="localePath('/')">
           <img class="navigation__logo" :src="logo.filename" :alt="logo.alt" />
         </Nuxt-link>
-        <nav class="navigation__list is-desktop">
+        <nav class="navigation__list">
           <div class="navigation__item" v-for="nav in navigationLinks" :key="nav._uid">
             <Nuxt-link class="navigation__link" :to="localePath(nav.link.story.url == '/' ? '/' : '/' + nav.link.story.url)">
               {{ nav.text }}
@@ -18,28 +18,18 @@
           </div>
         </nav>
       </div>
-      <ul class="navigation__right-side is-desktop">
-        <li class="navigation__lang" v-for="lang in availableLocales" :key="lang">
-          <NuxtLink :to="switchLocalePath(lang.code)" class="navigation__link" @click="updateLanguage(lang.code)">
-            <span class="navigation__link-text">{{ lang.code }}</span>
-          </NuxtLink>
-        </li>
-      </ul>
-
-        <button class="navigation__button-mobile is-mobile" id="mobileHamburger" @click="menuToggle()">
-          <div class="navigation__hamburger-icon">
-            <span></span>
-            <span></span>
-          </div>
-        </button>
-        <MobileNavigation v-if="isOpen" />
+      <ul class="navigation__right-side">
+          <li class="navigation__lang" v-for="lang in availableLocales" :key="lang">
+            <NuxtLink :to="switchLocalePath(lang.code)" class="navigation__link" @click="updateLanguage(lang.code)">
+              <span class="navigation__link-text">{{ lang.code }}</span>
+            </NuxtLink>
+          </li>
+        </ul>
     </div>
   </header>
 </template>
   
 <script setup>
-  import MobileNavigation from './mobile-navigation.vue';
-
   const storyblokApi = useStoryblokApi()
   const localePath = useLocalePath()
   const { locales, locale } = useI18n()
@@ -48,7 +38,6 @@
   let currentLang = ref(locale.value)
   const logo = ref('')
   const navigationLinks = ref('')
-  let isOpen = ref(false)
   
   const fetchData = async () => {
     try {
@@ -63,7 +52,7 @@
         navigationLinks.value = data.story.content.Navigations
 
       } catch (error) {
-        console.error('Error fetching data:', error)
+        console.error('Error fetching data:', error);
       }
   }
 
@@ -71,22 +60,13 @@
 
   onBeforeMount(() => {
     // Initial data fetch
-    fetchData()
+    fetchData();
   })
 
 
   const updateLanguage = (newLang) => {
-    currentLang.value = newLang
-    fetchData()
+    currentLang.value = newLang;
+    fetchData();
   };
-
-  const menuToggle = () => {
-      isOpen.value = !isOpen.value
-      const body = document.querySelector('body')
-      const hamburger = document.querySelector('.navigation__hamburger-icon')
-
-      body.classList.toggle('is-fixed')
-      hamburger.classList.toggle('is-active')
-  }
 
 </script>

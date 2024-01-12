@@ -10,16 +10,7 @@
     .three-tiles__inner {
         // layout 
         display: flex;
-        row-gap: rem-calc(72);
-        column-gap: rem-calc(32);
+        column-gap: rem-calc(100);
         padding-bottom: rem-calc(44);
-        flex-wrap: wrap;
-        justify-content: center;
-
-        @include laptop {
-            // layout 
-            column-gap: rem-calc(100);
-            justify-content: space-between;
-        }
     }
 }

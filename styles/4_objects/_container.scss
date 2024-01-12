@@ -1,18 +1,8 @@
 .container {
     // layout
     margin: 0 auto;
-    padding: rem-calc(0 16);
+    padding: rem-calc(0 32);
     max-width: rem-calc(1440);
-
-    @include mobile {
-        // layout 
-        padding: rem-calc(0 60);
-    }
-
-    @include laptop {
-        // layout 
-        padding: rem-calc(0 32);
-    }
 }
 
 .container__fullwidth {

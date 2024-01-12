@@ -2,11 +2,6 @@ body {
     // typo
     color: $color-dark;
     font-family: $font-body;
-
-    &.is-fixed {
-        // layout 
-        overflow: hidden;
-    }
 }
 
 a {
@@ -60,24 +55,4 @@ input {
     outline: none;
     border-radius: rem-calc(20);
     background-color: transparent;
-}
-
-.is-desktop {
-    // layout 
-    display: none;
-
-    @include laptop {
-        // layout 
-        display: flex;
-    }
-}
-
-.is-mobile {
-    // layout 
-    display: flex;
-
-    @include laptop {
-        // layout 
-        display: none;
-    }
 }

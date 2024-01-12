@@ -35,7 +35,7 @@
     const props = defineProps({ blok: Object })
     let currentActiveSlide = ref(0);
 
-    const slides = props.blok.carousels;
+    const slides =  props.blok.carousels;
 
     // Carousel
     const handleSlideChange = (val) => {
