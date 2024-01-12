@@ -21,7 +21,7 @@
                     </nuxt-link>
                     <nuxt-link class="button" v-if="link && linkText" :to="link">
                         {{ linkText }}
-                    </nuxt-link>
+                    </nuxt-link> 
                 </div>
             </div>
         </div>
