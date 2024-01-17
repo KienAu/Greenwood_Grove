@@ -2,6 +2,7 @@
     .footer__inner {
         // layout 
         padding-top: rem-calc(46);
+
         // typo
         color: $color-light;
 
@@ -34,7 +35,6 @@
         &:last-child {
             // layout
             padding-right: 0;
-            flex-direction: column;
             
             // design
             border-left: rem-calc(1) solid $color-grey

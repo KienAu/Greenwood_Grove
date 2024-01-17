@@ -48,7 +48,12 @@
 
         .hero-description {
             // layout 
-            width: 50%;
+            width: 100%;
+
+            @include laptop {
+                // layout 
+                width: 50%;
+            }
         }
 
         .hero-button__wrap {
@@ -78,17 +83,22 @@
 
         .hero-carousel__inner {
             // layout 
-            width: 50%;
+            width: 100%;
             height: 100%;
             position: relative;
+
+            @include laptop {
+                // layout 
+                width: 50%;
+            }
         }
 
         .hero-carousel__item {
             // layout 
-            top: 50%;
+            top: 0;
             left: 50%;
-            width: rem-calc(600);
-            height: rem-calc(600);
+            width: rem-calc(500);
+            height: rem-calc(500);
             overflow: hidden;
             position: absolute;
 
@@ -98,6 +108,19 @@
             // design
             border: rem-calc(1) solid $color-primary;
             border-radius: 50%;
+
+            @include mobile {
+                // layout 
+                width: rem-calc(768);
+                height: rem-calc(768);
+            }
+
+            @include laptop {
+                // layout 
+                top: 50%;
+                width: rem-calc(600);
+                height: rem-calc(600);
+            }
         }
 
         .hero-carousel__image {
@@ -119,9 +142,9 @@
 
         .hero-carousel__controls {
             // layout 
-            top: 55%;
+            top: 10%;
             left: 50%;
-            width: rem-calc(500);
+            width: rem-calc(320);
             display: flex;
             z-index: 2;
             position: absolute;
@@ -129,6 +152,22 @@
 
             // animation
             transform: translate(-50%, -50%);
+
+            @include mobile {
+                // layout 
+                top: 15%;
+                width: rem-calc(450);
+            }
+
+            @include tablet {
+                // layout 
+                width: rem-calc(500);
+            }
+
+            @include laptop {
+                // layout 
+                top: 55%;
+            }
         }
 
         .hero-carousel__control {
@@ -141,7 +180,12 @@
 
             svg {
                 // layout 
-                width: rem-calc(30);
+                width: rem-calc(50);
+
+                @include laptop {
+                    // layout 
+                    width: rem-calc(30);
+                }
             }
         }
     }

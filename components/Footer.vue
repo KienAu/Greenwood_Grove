@@ -4,7 +4,8 @@
             <div class="container">
                 <div class="footer-col">
                     <Nuxt-link class="footer__link" to="/">
-                        <img class="footer__logo" :src="footer.logo.filename" :alt="footer.logo.alt" />
+                        <img class="footer__logo is-desktop" :src="footer.logo.filename" :alt="footer.logo.alt" />
+                        <img class="footer__logo is-mobile" :src="footer.logo.filename" :alt="footer.logo.alt" />
                     </Nuxt-link>
                 </div>
                 <div class="footer-col">
@@ -22,25 +23,19 @@
                         <button class="button"> {{ $t('Send & Subscribe') }} </button>
                     </form>
                 </div>
-                <div class="footer-col">
-                    <h6 class="footer-title">
-                        {{ $t('Follow the Grove on Social Media') }}
-                    </h6>
-                    <ul class="footer-social-media__list">
-                        <li v-for="social in footer.socialMediaList">
-                            <a :href="social.link.url" target="_self">
-                                <img class="footer-social-media__icon" :src="social.icon.filename" :alt="social.icon.alt" />
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
 
         <div class="footer-copyright">
             <div class="footer-copyright__inner container">
                 <p><strong>{{ $t('Greenwoord Grove Dorval') }}</strong> {{ $t('© 2023 | All rights reserved') }}</p>
-                <a href="" target="_self">{{ $t('Terms & Conditions') }}</a>
+                <ul class="footer-social-media__list">
+                    <li v-for="social in footer.socialMediaList">
+                        <a :href="social.link.url" target="_self">
+                            <img class="footer-social-media__icon" :src="social.icon.filename" :alt="social.icon.alt" />
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="footer-google-map">

@@ -24,7 +24,8 @@ $color-blue: #00AEEF;
 
 // Fonts size
 $font-size-h1: (
-    null: rem-calc(130),
+    null: rem-calc(72),
+    $laptop: rem-calc(130),
 );
 $font-size-h2: (
     null: rem-calc(60),
