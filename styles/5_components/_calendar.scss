@@ -263,6 +263,13 @@
         }
     }
 
+    .calendar__detail {
+        // layout 
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
     .calendar__highlight {
         // layout
         width: 50%;

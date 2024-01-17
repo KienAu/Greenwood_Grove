@@ -23,27 +23,30 @@
                 </div>
             </div>
         </div>
-        <div class="calendar__legend">
-            <h6> {{ $t('Legend:') }} </h6>
-            <div class="calendar__legend--container">
-                <ul class="calendar__legend--type-list">
-                    <li class="calendar__legend--type-item"><span class="calendar__legend--color calendar__legend--color--courses"></span>Courses</li>
-                    <li class="calendar__legend--type-item"><span class="calendar__legend--color calendar__legend--color--workshops"></span>Workshops</li>
-                    <li class="calendar__legend--type-item"><span class="calendar__legend--color calendar__legend--color--events"></span>Events</li>
-                    <li class="calendar__legend--type-item"><span class="calendar__legend--color calendar__legend--color--celebrations"></span>Celebrations</li>
+        <div class="calendar__detail">
+            <div class="calendar__legend">
+                <h6> {{ $t('Legend:') }} </h6>
+                <div class="calendar__legend--container">
+                    <ul class="calendar__legend--type-list">
+                        <li class="calendar__legend--type-item"><span class="calendar__legend--color calendar__legend--color--courses"></span>Courses</li>
+                        <li class="calendar__legend--type-item"><span class="calendar__legend--color calendar__legend--color--workshops"></span>Workshops</li>
+                        <li class="calendar__legend--type-item"><span class="calendar__legend--color calendar__legend--color--events"></span>Events</li>
+                        <li class="calendar__legend--type-item"><span class="calendar__legend--color calendar__legend--color--celebrations"></span>Celebrations</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="calendar__highlight">
+                <div class="calendar__selected-date--wrapper">
+                    <span class="calendar__selected-date"></span>
+                </div>
+                <ul class="calendar__highlight--event-list">
+                    <li class="calendar__highlight--event-item" v-for="item in displayEvent" :class="'calendar__highlight--type-' + item.legends">
+                        {{ item.title }}, {{ item.startHours }} - {{ item.endHours }}
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class="calendar__highlight">
-            <div class="calendar__selected-date--wrapper">
-                <span class="calendar__selected-date"></span>
-            </div>
-            <ul class="calendar__highlight--event-list">
-                <li class="calendar__highlight--event-item" v-for="item in displayEvent" :class="'calendar__highlight--type-' + item.legends">
-                    {{ item.title }}, {{ item.startHours }} - {{ item.endHours }}
-                </li>
-            </ul>
-        </div>
+
     </div>
 </template>
 
@@ -110,18 +113,18 @@
         for (let i = 0; i < daysElement.length; i++) {
             const day = daysElement[i]
             const dayNumber = day.querySelector('.calendar__day-number')
-
+            const calendarEventList = day.querySelector('.calendar__day-event--list')
+            const li = document.createElement('li')
+            const calendarEventItems = calendarEventList.querySelectorAll('li')
             if (i >= theFirstDayOfWeek && dayCounter <= daysInMonth) {
                 const thisDate = new Date(year, month, dayCounter)
-                const calendarEventList = day.querySelector('.calendar__day-event--list')
-                const calendarEventItems = calendarEventList.querySelectorAll('li')
 
                 calendarEventItems.forEach((item) => {
                     item.remove()
                 })
 
                 eventList.forEach((event) => {
-                    const li = document.createElement('li')
+
                     if (thisDate.getTime() === new Date(event.date).getTime()) {
                         li.classList.add('calendar__dot')
                         switch (event.legends) {
@@ -138,7 +141,8 @@
                                 li.classList.add('calendar__dot--celebrations')
                                 break
                         }
-                        calendarEventList.appendChild(li);
+                        console.log(thisDate.getTime(), new Date(event.date).getTime())
+                        calendarEventList.appendChild(li)
                     }
                 })
 
@@ -148,6 +152,11 @@
             } else {
                 dayNumber.innerText = ''
                 dayNumber.classList.add('is-empty')
+                if (dayNumber.classList.contains('is-empty')) {
+                    calendarEventItems.forEach((item) => {
+                        item.remove()
+                    })
+                }
             }
         }
     }

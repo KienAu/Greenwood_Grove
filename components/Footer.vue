@@ -5,7 +5,7 @@
                 <div class="footer-col">
                     <Nuxt-link class="footer__link" to="/">
                         <img class="footer__logo is-desktop" :src="footer.logo.filename" :alt="footer.logo.alt" />
-                        <img class="footer__logo is-mobile" :src="footer.logo.filename" :alt="footer.logo.alt" />
+                        <img class="footer__logo is-mobile" :src="footer.mobileLogo.filename" :alt="footer.mobileLogo.alt" />
                     </Nuxt-link>
                 </div>
                 <div class="footer-col">

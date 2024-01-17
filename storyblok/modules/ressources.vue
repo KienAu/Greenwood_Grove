@@ -56,7 +56,7 @@
     let selectedImage = ref(null)
     let selectedLink = ref(null)
     let selectedLinkText = ref(null)
-    let limit = ref(2)
+    let limit = ref(6)
     const currentAmount = stories.length
 
     const openModal = (selected) => {
