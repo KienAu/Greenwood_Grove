@@ -33,7 +33,7 @@
    
   <script setup>
     const props = defineProps({ blok: Object })
-    let currentActiveSlide = ref(0);
+    let currentActiveSlide = ref(0); 
 
     const slides = props.blok.carousels;
 
