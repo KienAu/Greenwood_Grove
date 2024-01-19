@@ -13,6 +13,7 @@
 
 @import './4_objects/container';
 @import './4_objects/button';
+@import './4_objects/wysiwyg';
 
 @import './5_components/navigation';
 @import './5_components/calendar';
@@ -26,5 +27,8 @@
 @import './6_modules/calendar-module';
 @import './6_modules/three-tiles';
 @import './6_modules/ressources';
+@import './6_modules/image';
+@import './6_modules/title';
+@import './6_modules/two-columns';
 
 @import './7_pages/homepage';

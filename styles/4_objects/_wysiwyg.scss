@@ -1,0 +1,88 @@
+$h1-font-size: (
+    null: rem-calc(24),
+    $tablet: rem-calc(34), 
+    $laptop: rem-calc(34),
+);
+
+$h2-font-size: (
+    null: rem-calc(18),
+    $tablet: rem-calc(24), 
+    $laptop: rem-calc(30),
+);
+
+$h3-font-size: (
+    null: rem-calc(18),
+    $tablet: rem-calc(20), 
+    $laptop: rem-calc(24),
+);
+
+$h4-font-size: (
+    null: rem-calc(18),
+    $tablet: rem-calc(20),
+);
+
+$h5-font-size: (
+    null: rem-calc(16),
+    $tablet: rem-calc(18),
+);
+
+$h6-font-size: (
+    null: rem-calc(16),
+);
+
+.wysiwyg {
+    a,
+    p,
+    span {
+        // typo
+        font-size: rem-calc(16);
+    }
+
+
+    h1 {
+        // typo
+        @include breakpoint-style('font-size', $h1-font-size);
+        line-height: rem-calc(34);
+    }
+
+    h2 {
+        // typo
+        @include breakpoint-style('font-size', $h2-font-size);
+        line-height: rem-calc(32);
+    }
+
+    h3 {
+        // typo
+        @include breakpoint-style('font-size', $h3-font-size);
+        line-height: rem-calc(26);
+    }
+
+    h4 {
+        // typo
+        @include breakpoint-style('font-size', $h4-font-size);
+        line-height: rem-calc(22);
+    }
+
+    h5 {
+        // typo
+        @include breakpoint-style('font-size', $h5-font-size);
+        line-height: rem-calc(20);
+    }
+
+    h6 {
+        // typo
+        @include breakpoint-style('font-size', $h6-font-size);
+        line-height: rem-calc(18);
+    }
+
+    ol, ul {
+        // layout 
+        padding-left: rem-calc(16);
+
+        li {
+            // typo
+            list-style-type: inherit;
+        }
+    }
+    
+}

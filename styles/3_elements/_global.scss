@@ -81,3 +81,37 @@ input {
         display: none;
     }
 }
+
+.bg-white {
+    // design
+    background-color: $color-light;
+}
+
+.bg-black {
+    // typo
+    color: $color-light;
+
+    // design
+    background-color: $color-dark;
+}
+
+.bg-green {
+    // typo
+    color: $color-light;
+
+    // design
+    background-color: $color-secondary;
+}
+
+.bg-darkGreen { 
+    // typo
+    color: $color-light;
+    
+    // design
+    background-color: $color-tertiary;
+}
+
+.bg-lightGreen { 
+    // design
+    background-color: $color-primary;
+}

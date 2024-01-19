@@ -1,0 +1,91 @@
+.two-columns-block {
+    // layout
+    padding: rem-calc(100 0);
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .two-columns-block__title {
+        // typo
+        text-align: center;
+    }
+
+    .two-columns-block__separator {
+        // layout 
+        width: rem-calc(150);
+        height:rem-calc(2);
+        display: flex;
+        margin: rem-calc(32 0 48);
+        align-items: center;
+        justify-content: space-evenly;
+
+        // design
+        background-color: $color-secondary;
+
+        span {
+            // layout 
+            width: rem-calc(10);
+            height: rem-calc(10);
+            display: block;
+
+            // design
+            background-color: $color-secondary;
+
+            // animation 
+            transform: rotate(-45deg);
+        }
+    }
+
+    .two-columns-block__content {
+        // layout
+        display: flex;
+        justify-content: space-between;
+        column-gap: rem-calc(16);
+        flex-direction: column;
+        row-gap: rem-calc(16);
+
+        @include tablet {
+            // layout 
+            flex-direction: row;
+        }
+    }
+
+    .two-columns-block__col {
+        // layout 
+        width: 100%;
+
+        @include tablet {
+            // layout 
+            width: 50%;
+        }
+    }
+
+    &.bg-black,
+    &.bg-darkGreen {
+        .image-block__separator {
+            // design
+            background-color: $color-primary;
+
+            span {
+                // design
+                background-color: $color-primary;
+            }
+        }
+    }
+
+    &.bg-green {
+        .image-block__separator {
+            // design
+            background-color: $color-light;
+
+            span {
+                // design
+                background-color: $color-light;
+            }
+        }
+    }
+}

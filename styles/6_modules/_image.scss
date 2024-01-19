@@ -1,0 +1,68 @@
+.image-block {
+    // layout 
+    padding: rem-calc(100 0);
+
+    .container {
+        // layout 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    h2 {
+        // typo
+        text-align: center;
+    }
+
+    .image-block__separator {
+        // layout 
+        width: rem-calc(150);
+        height:rem-calc(2);
+        display: flex;
+        margin: rem-calc(32 0 48);
+        align-items: center;
+        justify-content: space-evenly;
+
+        // design
+        background-color: $color-secondary;
+
+        span {
+            // layout 
+            width: rem-calc(10);
+            height: rem-calc(10);
+            display: block;
+
+            // design
+            background-color: $color-secondary;
+
+            // animation 
+            transform: rotate(-45deg)
+        }
+    }
+    
+    &.bg-black,
+    &.bg-darkGreen {
+        .image-block__separator {
+            // design
+            background-color: $color-primary;
+
+            span {
+                // design
+                background-color: $color-primary;
+            }
+        }
+    }
+
+    &.bg-green {
+        .image-block__separator {
+            // design
+            background-color: $color-light;
+
+            span {
+                // design
+                background-color: $color-light;
+            }
+        }
+    }
+
+}
