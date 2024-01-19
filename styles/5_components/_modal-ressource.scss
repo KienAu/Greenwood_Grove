@@ -28,7 +28,7 @@
         // layout
         top: 50%;
         left: 50%;
-        width: calc(100% - rem-calc(100));
+        width: calc(100% - rem-calc(32));
         max-width: rem-calc(1024);
         min-height: calc(80svh - rem-calc(100));
         margin: 0 auto;
@@ -39,25 +39,35 @@
 
         // animation
         transform: translate(-50%, -50%);
+
+        @include tablet {
+            // layout 
+            width: calc(100% - rem-calc(100));
+        }
     }
 
     .modal-ressource__image-wrapper {
         // layout
         overflow: hidden;
         padding: rem-calc(32);
-        height: rem-calc(275);
+        height: rem-calc(150);
 
         // design
         border-radius: 50% / 100%;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         background-color: $color-tertiary;
+
+        @include tablet {
+            // layout 
+            height: rem-calc(275);
+        }
     }
 
     .modal-ressource__image {
         // layout 
         width: 100%;
-        height: rem-calc(300);
+        height: rem-calc(175);
         object-fit: cover;
         box-sizing: border-box;
 
@@ -71,6 +81,11 @@
         border-right-width: rem-calc(20);
         border-left-width: rem-calc(20);
         border-style: solid;
+
+        @include tablet {
+            // layout 
+            height: rem-calc(300)
+        }
     }
 
     .modal-ressource__content {
@@ -79,7 +94,7 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
-        padding: rem-calc(16 32 64);
+        padding: rem-calc(16 32 16);
 
         // design
         background-color: $color-tertiary;
@@ -102,15 +117,17 @@
         width: calc(100% - rem-calc(64));
         padding: rem-calc(32);
         overflow: hidden;
+        max-height: rem-calc(400);
 
         // design
         border-radius: rem-calc(25);
         border: rem-calc(1) solid $color-secondary;
+        
 
         .modal-ressource__text {
             // layout
             overflow-y: auto;
-            max-height: rem-calc(400);
+            max-height: rem-calc(300);
         }
     }
 

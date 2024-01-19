@@ -39,8 +39,9 @@
     ]);
 
     const close = () => {
-        const modal = document.querySelector('#modal');
-
-        modal.classList.remove('is-open');
+        const modal = document.querySelector('#modal')
+        const body = document.querySelector('body')
+        modal.classList.remove('is-open')
+        body.classList.remove('is-fixed')
     }
 </script>

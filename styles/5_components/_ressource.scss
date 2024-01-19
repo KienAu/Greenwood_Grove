@@ -1,6 +1,11 @@
 .ressource {
     // layout 
+    width: 100%;
+
+    @include tablet {
+            // layout 
     width: calc(50% - rem-calc(32));
+    }
 
     .ressource__inner {
         // layout 

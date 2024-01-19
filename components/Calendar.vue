@@ -141,7 +141,6 @@
                                 li.classList.add('calendar__dot--celebrations')
                                 break
                         }
-                        console.log(thisDate.getTime(), new Date(event.date).getTime())
                         calendarEventList.appendChild(li)
                     }
                 })
@@ -190,8 +189,6 @@
             }
         })
     }
-
-    
 
     const highlightDay = (e) => {
         displayEvent.value = [];

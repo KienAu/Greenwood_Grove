@@ -72,6 +72,11 @@
         column-gap: rem-calc(32);
         justify-content: center;
         align-items: center;
+
+        .router-link-active {
+            // design
+            background-color: $color-tertiary;
+        }
     }
 
     .mobile-navigation__lang-link {
@@ -88,9 +93,7 @@
         border-radius: rem-calc(30);
         background-color: $color-grey;
 
-        &:first-of-type
-
-        &.router-link-exact-active {
+        &.is-active {
             // design
             background-color: $color-tertiary;
         }

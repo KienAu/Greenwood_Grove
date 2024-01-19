@@ -2,7 +2,7 @@
     <section v-editable="blok" class="ressources-module">
         <div class="container">
             <div class="ressources-module__top">
-                <h2>{{ blok.title }}</h2>
+                <h2 class="ressources-module__title">{{ blok.title }}</h2>
                 <div class="ressources-module__seperator">
                     <span></span>
                 </div>
@@ -68,8 +68,10 @@
         selectedLinkText.value = selected.linkText
 
         const modal = document.querySelector('#modal')
+        const body = document.querySelector('body')
 
         modal.classList.add('is-open')
+        body.classList.add('is-fixed')
     }
 
     const loadMore = () => {

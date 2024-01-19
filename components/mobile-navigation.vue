@@ -3,9 +3,9 @@
       <div class="mobile-navigation__inner">
         <ul class="mobile-navigation__list">
             <li class="mobile-navigation__item" v-for="nav in navigationLinks" :key="nav._uid">
-                <nuxt-link class="mobile-navigation__link" :to="localePath(nav.link.story.url == '/' ? '/' : '/' + nav.link.story.url)">
+                <a class="mobile-navigation__link" :to="localePath(nav.link.story.url == '/' ? '/' : '/' + nav.link.story.url)">
                     {{ nav.text }}
-                </nuxt-link>
+                </a>
             </li>
         </ul>
         <div class="mobile-navigation__seperator">
@@ -13,9 +13,12 @@
           <span></span>
         </div>
         <div class="mobile-navigation__lang">
-            <NuxtLink v-for="lang in availableLocales" :key="lang" :to="switchLocalePath(lang.code)" class="mobile-navigation__lang-link" @click="updateLanguage(lang.code)">
-                <span class="mobile-navigation__lang-text">{{ lang.code }}</span>
-            </NuxtLink>
+            <a  :href="switchLocalePath('en')" class="mobile-navigation__lang-link" :class="isFrench ? '' : 'is-active'" @click="updateLanguage('en')">
+                <span class="mobile-navigation__lang-text">en</span>
+            </a>
+            <a :href="switchLocalePath('fr')" class="mobile-navigation__lang-link" :class="isFrench ? 'is-active' : ''" @click="updateLanguage('fr')">
+                <span class="mobile-navigation__lang-text">fr</span>
+            </a>
         </div>
       </div>
     </nav>
@@ -31,6 +34,7 @@
   let currentLang = ref(locale.value)
   const logo = ref('')
   const navigationLinks = ref('')
+  const isFrench = ref(false)
   
   const fetchData = async () => {
     try {
@@ -50,6 +54,17 @@
   }
 
 
+  
+  const isActive = () => {
+    if (window.location.href.includes("/fr")) {
+      isFrench.value = true
+    } else {
+      isFrench.value = false
+    }
+    
+    console.log(isFrench.value)
+  }
+
 
   onBeforeMount(() => {
     // Initial data fetch
@@ -57,9 +72,14 @@
   })
 
 
+  onMounted(() => {
+    isActive()
+  })
+
   const updateLanguage = (newLang) => {
     currentLang.value = newLang;
     fetchData();
   };
+
 
 </script>

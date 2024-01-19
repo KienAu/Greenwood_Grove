@@ -31,13 +31,15 @@ $font-size-h2: (
     null: rem-calc(60),
 );
 $font-size-h3: (
-    null: rem-calc(60),
+    null: rem-calc(32),
+    $laptop: rem-calc(60),
 );
 $font-size-h4: (
     null: rem-calc(48),
 );
 $font-size-h5: (
-    null: rem-calc(32),
+    null: rem-calc(18),
+    $tablet: rem-calc(32),
 );
 $font-size-h6: (
     null: rem-calc(24),
@@ -46,7 +48,8 @@ $font-size-button: (
     null: rem-calc(22),
 );
 $font-size-text: (
-    null: rem-calc(20),
+    null: rem-calc(16),
+    $laptop: rem-calc(20)
 );
 $font-size-footer-title: (
     null: rem-calc(20),
