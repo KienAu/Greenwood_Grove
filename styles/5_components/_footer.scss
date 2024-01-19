@@ -122,7 +122,6 @@
 
     .footer-newsletter__form {
         // layout
-        display: flex;
         row-gap: rem-calc(16);
         flex-flow: row wrap;
         justify-content: space-between;
@@ -137,16 +136,35 @@
             column-gap: rem-calc(16);
             justify-content: space-between;
             width: 100%;
+            margin-bottom: rem-calc(16);
         }
 
         .input {
-            // layout
-            width: 50%;
+            // layout 
+            width: 100%;
+            height: rem-calc(30);
+
+
+            @include mobile {
+                // layout
+                width: 50%;
+            }
+
+        }
+
+        .email {
+            // layout 
+            width: calc(100% - rem-calc(22));
+            height: rem-calc(30);
+            margin-bottom: rem-calc(16);
+
+
         }
 
         .button {
             // layout
             padding: rem-calc(10 16);
+            height: rem-calc(40);
 
             // typo
             @include breakpoint-style('font-size', $font-size-text);

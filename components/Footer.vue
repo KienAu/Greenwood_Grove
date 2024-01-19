@@ -11,16 +11,20 @@
                 <div class="footer-col">
                     <div class="footer-newsletter__text">
                         <h6 class="footer-title">    
-                            {{ $t('Contact us today & Learn More on the Grove:') }}
+                            {{ $t('Learn More on the Grove:') }}
                         </h6>
                     </div>
-                    <form class="footer-newsletter__form">
+                    <form class="footer-newsletter__form" action="https://greenwoodgrovemtl.us9.list-manage.com/subscribe/post?u=b6a7fdbbd093bc8e6d168b581&amp;id=c2848126b6&amp;f_id=00e41ee1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
                         <div class="footer-newsletter__input-wrapper">
-                            <input class="input" type="text" placeholder="Name" />
-                            <input class="input" type="email" placeholder="Email" />
+                            <input class="input text" type="text" name="FNAME" id="mce-FNAME" value="" placeholder="First name"/>
+                            <input class="input text" type="text" name="LNAME" id="mce-LNAME" value="" placeholder="Last name"/>
                         </div>
-                        <textarea class="textarea" placeholder="Your message ..." rows="5" cols="20"></textarea>
-                        <button class="button"> {{ $t('Send & Subscribe') }} </button>
+                        <input class="email" name="EMAIL" id="mce-EMAIL" type="email" placeholder="Email" value=""/>
+                        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" :value="$t('Send & Subscribe')">
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                            <input type="text" name="b_b6a7fdbbd093bc8e6d168b581_c2848126b6" tabindex="-1" value="">
+                        </div>
                     </form>
                 </div>
             </div>
