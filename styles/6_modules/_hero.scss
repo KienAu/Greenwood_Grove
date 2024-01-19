@@ -130,9 +130,15 @@
             display: none;
             position: absolute;
             max-width: rem-calc(1000);
+            height: 100%;
 
             // animation
             transform: translate(-50%, -50%);
+
+            @include laptop {
+                // layout 
+                height: auto;
+            }
 
             &.is-active {
                 // layout 
