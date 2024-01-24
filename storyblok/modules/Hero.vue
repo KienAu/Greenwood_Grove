@@ -16,6 +16,7 @@
       <div class="hero-carousel">
         <div class="hero-carousel__inner">
           <div class="hero-carousel__item" v-for="(item, index) in blok.carousels" :key="index" >
+            <div class="hero-carousel__item-transition"></div>
             <img class="hero-carousel__image" :src="item.image.filename" :alt="item.image.alt" :class="{'is-active': index === currentActiveSlide}" />
           </div>
           <div class="hero-carousel__controls">
@@ -33,9 +34,34 @@
    
   <script setup>
     const props = defineProps({ blok: Object })
+    const { gsap } = useGsap();
+
     let currentActiveSlide = ref(0); 
 
     const slides = props.blok.carousels;
+
+    const transitionSlider = () => {
+      gsap.fromTo(
+        ".hero-carousel__item-transition",
+        {
+          duration: 0.5,
+          width: 0,
+          left: 0,
+          right: "unset",
+        },
+        {
+          duration: 0.5,
+          width: "100%",
+        }
+      );
+      gsap.to(".hero-carousel__item-transition", {
+        duration: 0.5,
+        width: 0,
+        delay: 1,
+        left: "unset",
+        right: 0,
+      });
+    };
 
     // Carousel
     const handleSlideChange = (val) => {
@@ -47,7 +73,7 @@
       } else {
         direction = "previous";
       }
-
+      transitionSlider();
       setTimeout(() => {
         if (direction === "next" && calculateNextSlide < slides.length) {
           currentActiveSlide.value += val;
@@ -58,6 +84,8 @@
         } else {
           currentActiveSlide.value += val;
         }
-      }, 0);
+      }, 500);
+
+      
     };
   </script>

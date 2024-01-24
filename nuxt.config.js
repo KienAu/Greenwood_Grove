@@ -40,7 +40,10 @@ export default defineNuxtConfig({
         useStylesheet: true,
         download: false,
         preload: true
-    }
+    },
+    build: {
+        transpile: ["gsap"],
+      },
 })
 
 

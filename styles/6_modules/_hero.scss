@@ -195,4 +195,14 @@
             }
         }
     }
+
+    .hero-carousel__item-transition {
+        // layout
+        height: 100%;
+        position: absolute;
+        z-index:99;
+    
+        // design
+        background-color: $color-primary;
+    }
 }
