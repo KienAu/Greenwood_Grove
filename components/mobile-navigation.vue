@@ -3,7 +3,7 @@
       <div class="mobile-navigation__inner">
         <ul class="mobile-navigation__list">
             <li class="mobile-navigation__item" v-for="nav in navigationLinks" :key="nav._uid">
-                <a class="mobile-navigation__link" :to="localePath(nav.link.story.url == '/' ? '/' : '/' + nav.link.story.url)">
+                <a class="mobile-navigation__link" :href="localePath(nav.link.story.url == '/' ? '/' : '/' + nav.link.story.url)">
                     {{ nav.text }}
                 </a>
             </li>
@@ -13,7 +13,7 @@
           <span></span>
         </div>
         <div class="mobile-navigation__lang">
-            <a  :href="switchLocalePath('en')" class="mobile-navigation__lang-link" :class="isFrench ? '' : 'is-active'" @click="updateLanguage('en')">
+            <a :href="switchLocalePath('en')" class="mobile-navigation__lang-link" :class="isFrench ? '' : 'is-active'" @click="updateLanguage('en')">
                 <span class="mobile-navigation__lang-text">en</span>
             </a>
             <a :href="switchLocalePath('fr')" class="mobile-navigation__lang-link" :class="isFrench ? 'is-active' : ''" @click="updateLanguage('fr')">
