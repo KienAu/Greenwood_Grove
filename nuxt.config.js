@@ -9,11 +9,14 @@ export default defineNuxtConfig({
     ],
     app: {
         head: {
-            charset: 'utf-16',
-            viewport: 'initial-scale=1', 
+            charset: 'utf-8',
+            viewport: 'width=device-width, initial-scale=1', 
             title: 'Greenwood Grove',
             meta: [
-                { name: 'description', content: 'Workshops at the Greenwood Grove are based on the idea of community-driven learning. They are led by a diverse range of community members, including Coveners, Maidens and High Priestesses, who come together to share their knowledge on a weekly basis. Many are professionals in specialized fields such as veterinary technology, mental health, medical health, landscaping, accounting, art, herbology, early-childhood development, teaching and other professional domains.' }
+                { name: 'description', content: 'Workshops at the Greenwood Grove are based on the idea of community-driven learning. They are led by a diverse range of community members, including Coveners, Maidens and High Priestesses, who come together to share their knowledge on a weekly basis. Many are professionals in specialized fields such as veterinary technology, mental health, medical health, landscaping, accounting, art, herbology, early-childhood development, teaching and other professional domains.' },
+                { name: 'ogDescription', content: 'Workshops at the Greenwood Grove are based on the idea of community-driven learning. They are led by a diverse range of community members, including Coveners, Maidens and High Priestesses, who come together to share their knowledge on a weekly basis. Many are professionals in specialized fields such as veterinary technology, mental health, medical health, landscaping, accounting, art, herbology, early-childhood development, teaching and other professional domains.' },
+                { name: 'keyword', content: '' }
+                
             ],
         },
     },
