@@ -15,7 +15,7 @@ export default defineNuxtConfig({
             meta: [
                 { name: 'description', content: 'Workshops at the Greenwood Grove are based on the idea of community-driven learning. They are led by a diverse range of community members, including Coveners, Maidens and High Priestesses, who come together to share their knowledge on a weekly basis. Many are professionals in specialized fields such as veterinary technology, mental health, medical health, landscaping, accounting, art, herbology, early-childhood development, teaching and other professional domains.' },
                 { name: 'ogDescription', content: 'Workshops at the Greenwood Grove are based on the idea of community-driven learning. They are led by a diverse range of community members, including Coveners, Maidens and High Priestesses, who come together to share their knowledge on a weekly basis. Many are professionals in specialized fields such as veterinary technology, mental health, medical health, landscaping, accounting, art, herbology, early-childhood development, teaching and other professional domains.' },
-                { name: 'keyword', content: '' }
+                { name: 'keyword', content: 'Greenwood Grove, Greenwood Grove Mtl, Greenwood, Witches, runes, learning. They are led by a diverse range of community members, including Coveners, Maidens and High Priestesses, who come together to share their knowledge on a weekly basis. Many are professionals in specialized fields such as veterinary technology, mental health, medical health, landscaping, accounting, art, herbology, early-childhood development' }
                 
             ],
         },
