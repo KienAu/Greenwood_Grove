@@ -10,6 +10,12 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        order: 2;
+
+        @include tablet {
+            // layout
+            order: unset;
+        }
     }
 
     .calendar__top {
@@ -325,9 +331,11 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        order: 1;
 
         @include tablet {
             // layout 
+            order: unset;
             flex-direction: row;
         }
     }
