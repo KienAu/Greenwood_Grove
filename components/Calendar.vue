@@ -20,6 +20,7 @@
                     <span class="calendar__day-number"></span>
                     <ul class="calendar__day-event--list">
                     </ul>
+                    <span class="calendar__day-event"></span>
                 </div>
             </div>
         </div>
@@ -92,10 +93,11 @@
         t('months.December'),
     ])
 
-    let displayEvent = ref([]);
+    let displayEvent = ref([])
     const today = new Date()
     let currentMonth = today.getMonth()
     let currentYear = today.getFullYear()
+
     const updateCalendar = (month, year) => {
         const theFirst = new Date()
         theFirst.setMonth(month)
@@ -116,16 +118,19 @@
             const calendarEventList = day.querySelector('.calendar__day-event--list')
             const li = document.createElement('li')
             const calendarEventItems = calendarEventList.querySelectorAll('li')
+            const eventName = day.querySelector(".calendar__day-event")
             if (i >= theFirstDayOfWeek && dayCounter <= daysInMonth) {
                 const thisDate = new Date(year, month, dayCounter)
 
                 calendarEventItems.forEach((item) => {
                     item.remove()
                 })
-
+                eventName.innerText = ''
                 eventList.forEach((event) => {
 
                     if (thisDate.getTime() === new Date(event.date).getTime()) {
+                        console.log(event.title)
+                        eventName.innerText = `- ${event.title}`
                         li.classList.add('calendar__dot')
                         switch (event.legends) {
                             case 'events':
@@ -145,6 +150,8 @@
                     }
                 })
 
+
+
                 dayNumber.innerText = dayCounter
                 dayCounter++
                 dayNumber.classList.remove('is-empty')
@@ -156,6 +163,8 @@
                         item.remove()
                     })
                 }
+
+                eventName.innerText = ''
             }
         }
     }
