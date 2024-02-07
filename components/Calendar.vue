@@ -142,7 +142,7 @@
                             case 'workshops':
                                 li.classList.add('calendar__dot--workshops')
                                 break
-                            case 'celebrations':
+                            case 'Celebrations':
                                 li.classList.add('calendar__dot--celebrations')
                                 break
                         }
