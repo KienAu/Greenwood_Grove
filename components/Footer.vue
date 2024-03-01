@@ -32,7 +32,7 @@
 
         <div class="footer-copyright">
             <div class="footer-copyright__inner container">
-                <p><strong>{{ $t('Greenwoord Grove Dorval') }}</strong> {{ $t('© 2023 | All rights reserved') }}</p>
+                <p><strong>{{ $t('Greenwoord Grove Montreal') }}</strong> {{ $t('© 2024 | All rights reserved') }}</p>
                 <ul class="footer-social-media__list">
                     <li v-for="social in footer.socialMediaList">
                         <a :href="social.link.url" target="_self">

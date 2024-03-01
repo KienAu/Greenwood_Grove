@@ -226,6 +226,14 @@
                 // layout
                 display: block;
             }
+
+            div {
+                // layout
+                overflow: hidden;
+                
+                // typo
+                text-overflow: ellipsis;
+            }
         }
 
         .calendar__day-event--list {

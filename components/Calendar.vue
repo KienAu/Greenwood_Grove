@@ -127,30 +127,25 @@
                 })
                 eventName.innerText = ''
                 eventList.forEach((event) => {
-
                     if (thisDate.getTime() === new Date(event.date).getTime()) {
-                        console.log(event.title)
-                        eventName.innerText = `- ${event.title}`
-                        li.classList.add('calendar__dot')
+                        console.log(event)
+                        eventName.innerHTML += `<div>- ${event.title}</div>`
                         switch (event.legends) {
                             case 'events':
-                                li.classList.add('calendar__dot--events')
+                                calendarEventList.innerHTML += `<li class="calendar__dot calendar__dot--events"></li>`;
                                 break
                             case 'courses':
-                                li.classList.add('calendar__dot--courses')
+                                calendarEventList.innerHTML += `<li class="calendar__dot calendar__dot--courses"></li>`;
                                 break
                             case 'workshops':
-                                li.classList.add('calendar__dot--workshops')
+                                calendarEventList.innerHTML += `<li class="calendar__dot calendar__dot--workshops"></li>`;
                                 break
                             case 'Celebrations':
-                                li.classList.add('calendar__dot--celebrations')
+                                calendarEventList.innerHTML += `<li class="calendar__dot calendar__dot--celebrations"></li>`;
                                 break
                         }
-                        calendarEventList.appendChild(li)
                     }
                 })
-
-
 
                 dayNumber.innerText = dayCounter
                 dayCounter++
