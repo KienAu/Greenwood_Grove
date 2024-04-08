@@ -41,6 +41,4 @@
 
     const block = props.blok
 
-    console.log(block)
-
 </script>

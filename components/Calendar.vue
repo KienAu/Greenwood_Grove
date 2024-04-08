@@ -54,7 +54,7 @@
 <script setup>
     const storyblokApi = useStoryblokApi()
     const { data } = await storyblokApi.get('cdn/stories', {
-        version: 'draft',
+        version: 'published',
         starts_with: 'events',
         is_startpage: false,
     })
@@ -112,11 +112,12 @@
         yearEl.innerText = `${year}`
         const daysInMonth = new Date(year, month + 1, 0).getDate()
         let dayCounter = 1
+
+
         for (let i = 0; i < daysElement.length; i++) {
             const day = daysElement[i]
             const dayNumber = day.querySelector('.calendar__day-number')
             const calendarEventList = day.querySelector('.calendar__day-event--list')
-            const li = document.createElement('li')
             const calendarEventItems = calendarEventList.querySelectorAll('li')
             const eventName = day.querySelector(".calendar__day-event")
             if (i >= theFirstDayOfWeek && dayCounter <= daysInMonth) {
@@ -127,8 +128,10 @@
                 })
                 eventName.innerText = ''
                 eventList.forEach((event) => {
-                    if (thisDate.getTime() === new Date(event.date).getTime()) {
-                        console.log(event)
+                    let realDate = []
+                    realDate.push(event.date.split(" "))
+
+                    if (thisDate.getTime() === new Date(realDate[0][0] + ' 00:00').getTime()) {
                         eventName.innerHTML += `<div>- ${event.title}</div>`
                         switch (event.legends) {
                             case 'events':

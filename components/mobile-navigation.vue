@@ -61,8 +61,6 @@
     } else {
       isFrench.value = false
     }
-    
-    console.log(isFrench.value)
   }
 
 
