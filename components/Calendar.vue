@@ -190,8 +190,9 @@
         selectedDate.innerText = currentDate
 
         eventList.forEach((event) => {
-            let eventDate = new Date(event.date)
-            if (eventDate.getTime() === new Date(`${month}-${day}-${year}`).getTime()) {
+            let realDate = []
+            realDate.push(event.date.split(" "))
+            if (new Date(realDate[0][0] + ' 00:00').getTime() === new Date(`${year}-${month}-${day} 00:00`).getTime()) {
                 displayEvent.value.push(event)
             }
         })
@@ -228,8 +229,9 @@
             selectedDate.innerText = `${selectedMonth} ${selectedDay + formatDay}, ${selectedYear}`
             let date = new Date(`${selectedYear}-${selectedMonth}-${selectedDay}`)
             eventList.forEach((event) => {
-                let eventDate = new Date(event.date)
-                if (eventDate.getTime() === date.getTime()) {
+                let realDate = []
+                realDate.push(event.date.split(" "))
+                if (new Date(realDate[0][0] + ' 00:00').getTime() === date.getTime()) {
                     displayEvent.value.push(event)
                 }
             })
